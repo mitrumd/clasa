@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clasa</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family:'Futura Std Condensed Light';
+        }
+
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .mySlides {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .mySlides img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .fade {
+            animation-name: slide;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+
+        .button-container {
+            position: absolute;
+            bottom: 45%;
+            width: 100%;
+            text-align: center;
+            line-height: 20px;
+            
+        }
+
+        .button-container button {
+            background-color: #f542ce; /* Roz */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            font-weight:bold;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+            font-family: Futura;
+        }
+
+        .button-container button:hover {
+            background-color: #fb6cdb;
+        }
+    </style>
+    <link href="
+https://cdn.jsdelivr.net/npm/futura-font@1.0.0/styles.min.css
+" rel="stylesheet">
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="4B.jpg" alt="Image 1">
+        </div>
+        <div class="mySlides fade">
+            <img src="5B.jpg" alt="Image 2">
+        </div>
+        <div class="mySlides fade">
+            <img src="2015-07-01 19.31.16.jpg" alt="Image 3">
+        </div>
+        <div class="mySlides fade">
+            <img src="20121121_125528.jpg" alt="Image 3">
+        </div>
+        <div class="mySlides fade">
+            <img src="260120102562.jpg" alt="Image 3">
+        </div>
+        <div class="mySlides fade">
+            <img src="260120102586.jpg" alt="Image 3">
+        </div>
+        <div class="mySlides fade">
+            <img src="IMG_4548.jpg" alt="Image 3">
+        </div>
+        <div class="mySlides fade">
+            <img src="IMG.jpg" alt="Image 3">
+        </div>
+        <div class="button-container">
+            <button onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSehQkwEopq7CByi6R9uDmW5Ex3By57etOT3tJ7c9PZhp1TcNA/viewform'">ți s-a făcut dor?<img style="margin-left: 3px; margin-top:5px; width: 40px; position: absolute;" src="mouse.png"></button>
+        </div>
+    </div>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+    </script>
+</body>
+</html>
